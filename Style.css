@@ -3,8 +3,19 @@ nav a{
     font-weight: bold;
 }
 
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
 
-
+.flex-item{
+    width: 60px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
 
 
 *{
