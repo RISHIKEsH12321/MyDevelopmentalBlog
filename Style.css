@@ -1,20 +1,30 @@
 nav a{
     color: black;
     font-weight: bold;
+    
+}
+
+nav{
+    border: 1px solid white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
 }
 
 .flex-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .flex-item{
     width: 60px;
-    height: 50px;
+    height: auto;
     margin: 10px;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
+    
 }
 
 
@@ -24,3 +34,7 @@ nav a{
     color: wheat;
 }
 
+ul{
+    padding-left: 2%;
+    list-style-type: square;
+}
