@@ -22,6 +22,7 @@
         <a class="flex-item" href="#Week4">Week 4</a>
         <a class="flex-item" href="#Week5">Week 5</a>
         <a class="flex-item" href="#Week6">Week 6</a>
+        <a class="flex-item" href="#Week7">Week 7</a>
         </ul>
     </nav>
     <article id="Week1">
@@ -568,12 +569,278 @@
         <br>&nbsp&nbsp&nbsp expense *= 2;
         <br>&nbsp&nbsp&nbspconsole.log("Expense:" + expense);
         <br>}
-
     </p>
 
 
     </article>
 
+   <hr>
+
+
+   <article id = "Week7">
+    <h2>Week 7</h2>
+    <h3>JS</h3>
+    <h3>DOM</h3>
+    <p>As a browser loads a webpage, it creates a model of that page. The model is called a DOM Tree</p>
+
+    <h3>Steps on working with the DOM</h3>
+    <ol>
+        <li>Locate the node that represents the element you want to work with</li>
+        <li>Use its text content, child elements, and attributes</li>
+    </ol>
+
+    <h3>Access Elements</h3>
+    <ul>
+        <li>getElementById(); -> Uses the value of an element's id attribute</li>
+        <li>querySelector(); -> Uses a CSS selector, and returns the first matching element. Classes or Ids can be used</li>
+        <li>getElementsByClassName(); -> Selects all elements that have a specific value for their class attribute</li>
+        <li>getElementsByTagName(); -> Selects all elements that have the specified tag name</li>
+        <li>querySelectorAll() -> Uses a CSS selector to select all matching elements</li>
+        <li>var itemOne = getElementById("one"); -> If you are working with the element more than <br>once, it is best you store it in a variable. </li>
+        <li>item() ->  Nodelists have a method called items(). Returns the individual node from the NodeList.<br>Specify the index number as the parameter
+        <br>let elements =
+        <br>document.getElementsByClassName('hot');
+        <br>if (elements.length >= 1){
+        <br>let firstItem = elements.item(0);
+        <br>}</li>
+        <li>Array syntax -> Access individual nodes using a square bracket syntax like an array.<br>Specify the index number as the parameter
+        <br>let elements =
+        <br>document.getElementsByClassName('hot');
+        <br>if (elements.length >= 1){
+        <br>let firstItem = elements[0];
+        <br>}
+        </li>
+        <li></li>
+
+
+    </ul>
+
+
+
+    <section>
+        <h3>Event Handling</h3>
+        <h4>UI Events</h4>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>load</td>
+            <td>Web page has finished loading</td>
+        </tr>
+        <tr>
+            <td>unload</td>
+            <td>Web page is unloading (usually because a new page was requested)</td>
+        </tr>
+        <tr>
+            <td>error</td>
+            <td>Browser encounters a JavaScript error or an asset doesn't exist</td>
+        </tr>
+        <tr>
+            <td>resize</td>
+            <td>Browser window has been resized</td>
+        </tr>
+        <tr>
+            <td>scroll</td>
+            <td>User has scrolled up or down the page</td>
+        </tr>
+    </table>
+
+    <h4>Keyborad Events</h4>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>keydown</td>
+            <td>User first presses a key (repeats while the key is depressed)</td>
+        </tr>
+        <tr>
+            <td>keyup</td>
+            <td>User releases a key</td>
+        </tr>
+        <tr>
+            <td>keypress</td>
+            <td>Character is being inserted (repeats while the key is depressed)</td>
+        </tr>
+    </table>
+
+    <h4>Mouse Events</h4>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+        
+    <tr>
+        <td>click</td>
+        <td>User presses and releases a button over the same element</td>
+    </tr>
+    <tr>
+        <td>dblclick</td>
+        <td>User presses and releases a button twice over the same element</td>
+    </tr>
+    <tr>
+        <td>mousedown</td>
+        <td>User presses a mouse button while over an element</td>
+    </tr>
+    <tr>
+        <td>mouseup</td>
+        <td>User releases a mouse button while over an element</td>
+    </tr>
+    <tr>
+        <td>mousemove</td>
+        <td>User moves the mouse (not on a touchscreen)</td>
+    </tr>
+    <tr>
+        <td>mouseover</td>
+        <td>User moves the mouse over an element (not on a touchscreen)</td>
+    </tr>
+    <tr>
+        <td>mouseout</td>
+        <td>User moves the mouse off an element (not on a touchscreen)</td>
+    </tr>
+    </table>
+
+    <h4>Focus Events</h4>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+        <td>focus</td>
+        <td>Element gains focus</td>
+    </tr>
+    <tr>
+        <td>focusin</td>
+        <td>Element gains focus (bubbles up the DOM tree)</td>
+    </tr>
+    <tr>
+        <td>blur</td>
+        <td>Element loses focus</td>
+    </tr>
+    <tr>
+        <td>focusout</td>
+        <td>Element loses focus (bubbles up the DOM tree)</td>
+    </tr>
+    </table>
+
+    <h4>Form Events</h4>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>change</td>
+            <td>Value in any &lt;input&gt; or &lt;textarea&gt; element has changed or any element with the contenteditable attribute</td>
+        </tr>
+        <tr>
+            <td>input</td>
+            <td>Value in select box, checkbox, or radio button changes</td>
+        </tr>
+        <tr>
+            <td>submit</td>
+            <td>User submits a form (using a button or a key)</td>
+        </tr>
+        <tr>
+            <td>reset</td>
+            <td>User clicks on a form's reset button (rarely used in today's context for UX reasons)</td>
+        </tr>
+        <tr>
+            <td>cut</td>
+            <td>User cuts content from a form field</td>
+        </tr>
+        <tr>
+            <td>copy</td>
+            <td>User copies content from a form field</td>
+        </tr>
+        <tr>
+            <td>paste</td>
+            <td>User pastes content into a form field</td>
+        </tr>
+        <tr>
+            <td>select</td>
+            <td>User selects some text in a form field</td>
+        </tr>
+    </table>
+    </section>
+
+    <h3>Event Listeners</h3>
+    <ul>
+        <li>Event Listeners with No Paramenter -> element.addEventListener('event', functionName, [Boolean]);</li>
+        <li>Event Listeners with No Paramenter -> 
+            <br>el.addEventListener('blur', function(){
+            <br>checkUsername(5);
+            <br>}, false);</li>
+    </ul>
+    
+    <h3>Evene Objects</h3>
+    <p>When an event occurs, the event object tells information about the event, and the element it happened upon. 
+        <br>Every time an event fires, the event object contains helpful data about the event.
+    </p>
+
+
+    <h3>Local Storage</h3>
+    <p>HTML5 Storage is based on named key/value pairs. You store data based on a named key, then you can retrieve
+        <br>that data with the same key. The named key is a string.<br>
+        <br>The data can be any type supported by JavaScript, including strings, Booleans, integers, or floats.
+        <br>However, the data is actually stored as a string.<br>
+        <br>If you are storing and retrieving anything other than strings, you will need to
+        <br>use functions like parseInt() or parseFloat() to coerce your retrieved data
+        <br>into the expected JavaScript data type.
+    </p>
+
+    <h3>Types of Storage</h3>
+    <ul>
+        <li>localStorage -> Stored when tab is closed & All open windows / tabs Y N can access the data</li>
+        <li>sessionStorage -> NOT Stored when tab is closed & NOT All open windows / tabs Y N can access the data</li>
+    </ul>
+
+    <h3>Methods & Properties</h3>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>setItem(key,value)</td>
+            <td>Creates a new key/value pair</td>
+        </tr>
+        <tr>
+            <td>getItem(key)</td>
+            <td>Gets the value for the specified key</td>
+        </tr>
+        <tr>
+            <td>removeItem(key)</td>
+            <td>Removes the key/value pair for the specified key</td>
+        </tr>
+        <tr>
+            <td>clear() </td>
+            <td>Clears all information from that storage object</td>
+        </tr>
+        <tr>
+            <td>length (A property)</td>
+            <td>Number of keys</td>
+        </tr>
+    </table>
+    
+    <h3>Objects</h3>
+
+    <p>JSON looks like object literal syntax but it is just data, not an object
+        <br>E.g.<br>
+        <br>{
+        <br>"name": "Pikachu",
+        <br>"hp": 200,
+        <br>"attack": 999,
+        <br>"defense": 999,
+        <br>"type": "electric"
+        <br>}
+    </p>
+
+   </article>
    <hr>
 </body>
 </html>

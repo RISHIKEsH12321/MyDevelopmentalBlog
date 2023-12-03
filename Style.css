@@ -38,3 +38,7 @@ ul{
     padding-left: 2%;
     list-style-type: square;
 }
+
+table, th, td {
+    border:1px solid black;
+  }
