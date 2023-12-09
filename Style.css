@@ -10,6 +10,26 @@ nav{
     padding-bottom: 5px;
     padding-left: 5px;
 }
+.nav-bar-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-bar-items{
+    width: 20%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color:bisque;
+}
+
+.nav-bar-items:hover{
+    background-color: brown;
+}
 
 .flex-container{
     display: flex;

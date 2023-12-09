@@ -15,14 +15,15 @@
         </p>
     </header>
 
-    <nav class = "flex-container">   
-        <a class="flex-item" href="#Week1">Week 1</a>
-        <a class="flex-item" href="#Week2">Week 2</a>
-        <a class="flex-item" href="#Week3">Week 3</a>
-        <a class="flex-item" href="#Week4">Week 4</a>
-        <a class="flex-item" href="#Week5">Week 5</a>
-        <a class="flex-item" href="#Week6">Week 6</a>
-        <a class="flex-item" href="#Week7">Week 7</a>
+    <nav class = "nav-bar-container">   
+        <a class="nav-bar-items" href="#Week1">Week 1</a>
+        <a class="nav-bar-items" href="#Week2">Week 2</a>
+        <a class="nav-bar-items" href="#Week3">Week 3</a>
+        <a class="nav-bar-items" href="#Week4">Week 4</a>
+        <a class="nav-bar-items" href="#Week5">Week 5</a>
+        <a class="nav-bar-items" href="#Week6">Week 6</a>
+        <a class="nav-bar-items" href="#Week7">Week 7</a>
+        <a class="nav-bar-items" href="#Week8">Week 8</a>
         </ul>
     </nav>
     <article id="Week1">
@@ -496,7 +497,7 @@
         </details>
    </article>
 
-
+   <hr>
 
    <article id = "Week6">
     <h2>Week 6</h2>
@@ -669,10 +670,10 @@
 
     <h4>Mouse Events</h4>
     <table>
-        <tr>
-            <th>Event</th>
-            <th>Description</th>
-        </tr>
+    <tr>
+        <th>Event</th>
+        <th>Description</th>
+    </tr>
         
     <tr>
         <td>click</td>
@@ -838,6 +839,78 @@
         <br>"defense": 999,
         <br>"type": "electric"
         <br>}
+    </p>
+
+   </article>
+   <hr>
+
+   <article id = "Week8">
+    <h2>Week 8</h2>
+    <h3>Script Placement</h3>
+    <p>.js files should be at the bottom of the body.</p>
+
+    <br>
+
+    <h3>Data Attributes</h3>
+    <h4>Key Attributes</h4>
+    <ul>
+        <li>class</li>
+        <li>id</li>
+        <li>data: Allows for custom attributes to be created.<br>
+        E.g. < p data-spacing = "10cm"> < /p></li>
+    </ul>
+
+    <h3>Getting & Setting Data in JS</h3>
+    <p><span style = "font-weight: bold;">Getting</span>:<br>document.querySelector('.highlight').getAttribute('data-color');</p>
+    <p><span style = "font-weight: bold;">Setting</span>:<br>document.querySelector('.highlight').setAttribute('data-color','red’);</p>
+
+    <h3>Checking Document for Classes.</h3>
+    <p>.contains() -> el.classList.contains("Class")</p>
+
+
+    <h3>APIs</h3>
+
+    <h3>AJAX</h3>
+    <p>AJAX is a technique for loading data into part of a page without having to refresh the entire page. 
+        The data is often sent in a format called JavaScript Object Notation (or JSON)
+    </p>
+
+    <h4>Reasoning for AJAX</h4>
+    <p>When a browser comes across a <.script> tag, it will typically stop processing the rest of the
+        page until it has loaded and processed that script. This is known as a synchronous processing model.
+        With AJAX, the browser can request some data from a server and once that data has been requested,
+        continue to load the rest of the page and process the user's interactions. This is known as asynchronous (or
+        non-blocking) processing model.<br><br>
+        Once a page has loaded, if you want to update what the user sees in the browser, typically you
+        would refresh the entire page. This means the user has to wait for a whole new page to
+        download and be rendered by the browser. With AJAX, if you only need to update a part of the
+        page, you can just update the content of one element. This is done by intercepting an event (user clicks on
+        link or submits a form) and requesting new content from the server via an asynchronous request
+    
+    </p>
+
+    <h3>Using AJAX via JS</h3>
+    <p>Basic AJAX reques:<br>   
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar XHR = new XMLHttpRequest();<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspXHR.onreadystatechange = function(){<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif(XHR.readyState == 4 && XHR.status == 200){<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspconsole.log(XHR.responseText);<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp};<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspXHR.open("GET", "https://api.github.com/zen");<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspXHR.send();<br>
+    </p>
+    
+    <h3>API via JS</h3>
+    <p>Basic Fetch request<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfetch(url)<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp.then(function(res){<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspconsole.log(res);<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp})<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp.catch(function(error<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp){<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspconsole.log(error);<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp})<br>
     </p>
 
    </article>
