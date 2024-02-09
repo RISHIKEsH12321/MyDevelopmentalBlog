@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>
+    <link rel="icon" type="image/x-icon" style = "border-radius: 50%;" href="https://cdn-icons-png.freepik.com/512/693/693467.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-...">
+    <style>
+        .simple-header{
+            font-size: large;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week01.html">Week 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week02.html">Week 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week03.html">Week 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week04.html">Week 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week05.html">Week 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week06.html">Week 6</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week07.html">Week 7</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week08.html">Week 8</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week09.html">Week 9</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week12.html">Week 12</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week14.html">Week 14</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class= "display-1">JavaScript</h1>
+        <br>
+        <h3>Variables</h3>
+        <p>It is a data container.</p>
+        <p>How to create and assign a value : <b>var num = 12;</b></p>
+        
+        <p class="simple-header">Rules to naming</p>
+        <ol>
+            <li>Has to begin with a letter or $</li>
+            <li>Must not be a reserved word</li>
+        </ol>
+
+        <br>
+        <p class="simple-header">Multiple Variable Creation:</p>
+        <ol>
+            <li>var item1 = "Item 1", item 2 = "Item 2";</li>
+            <li>let item1 = 5;</li>
+        </ol>
+
+        <br>
+        <h4>Variable Types</h4><br>
+        <h5>String</h5>
+        <ul>
+            <li>Must be in single/double quotes (Must begin and end with the same type)</li>
+            <li>If multiple types of quotes are needed in string use \</li>
+            <li>\ can also be used to make another line</li>
+            <li>String can also be made using `string here`</li>
+            <li>Can be formatted using "string number ${a variable here}"</li>
+            <li>Can use methods or proerties to manipulate Strings : string.toUpperCase() or string.Length()</li>
+        </ul>
+
+        <br>
+        <h5>Numbers</h5>
+        <ul>
+            <li>Can have whole number, decimal or even negative number</li>
+            <li>Can be infinity if you use Infinity</li>
+            <li>NaN -> Not a Number</li>
+            <li>Can use methods or proerties to manipulate Strings :  Math.random() or Math.round()</li>
+        </ul>
+
+        <br>
+        <h5>Booleans</h5>
+        <ul>
+            <li>Can be true or false (Case Sensitive)</li>
+            <li>Useful in Comparisons</li>
+            <li>Useful in Asking Questions in Code</li>
+        </ul>
+
+        <br>
+        <h5>Constant</h5>
+        <ul>
+            <li>Is an Immutable Variable</li>
+            <li>Can me made using const : const ID = S123087</li>
+            <li>Useful so that value of variable is not accidently changed</li>
+        </ul>
+
+        <br>
+        <h4>Objects</h4>
+        <p class = "simple-header">Is a kind of box with labeled folders.</p>
+        
+        <br>
+        <h5>Basics</h5>
+        <ul>
+            <li>Allows data to be Encapsulated</li>
+            <li>Create by var item = {label : "asd123dsa", "Color": "Pink"};</li>
+            <li>Containes keys and values</li>
+        </ul>
+
+        <br>
+        <h5>Manipulation</h5>
+        <ul>
+            <li>Get value using eky -> item.label or item["Color"]</li>
+            <li>Changing values -> item.label = 12 or item["Color"] = "Red"</li>
+            <li>Creating property -> item.texture = "Smooth" or item["texture"] = "Smooth"</li>
+            <li>Remove Property ->  delete.texture or delete.item["texture"]</li>
+        </ul>
+
+        <br>
+        <h5>References</h5>
+        <ul>
+            <li>orginal2 = orginal -> Would mean that when original is changed, original2 would also be changed</li>
+            <li>To get a true copy -> copy = Object.assign([],original); or copy = {... orginal};</li>
+        </ul>
+
+        <br>
+        <h4>Arrays</h4>
+        <p class="simple-header">To store lists of data that preserve their order </p>
+
+        <br>
+        <h5>Basics</h5>
+        <ul>
+            <li>Create by var myArray = [1,2,'three','four',true];</li>
+            <li>Are zero indexed</li>
+            <li>Arrays can also contain Objects and Arrays -> [{name : "donkey"},[1,2,3]];</li>
+            <li>Can use properties and methods -> myArray.length</li>
+        </ul>
+
+        <br>
+        <h5>Manipulation</h5>
+        <ul>
+            <li>Getting Values -> myArray[0]</li>
+            <li>Replacing Values -> myArray[0] = 'One';</li>
+            <li>Adding Last Values -> myArray[myArray.length] = 'Last'</li>
+            <li>Adding Last Values -> myArray.push("Final")</li>
+            <li>Remove Last Values -> myArray.pop()</li>
+            <li>Remove/Addinng First Value -> myArray.shift()</li>
+            <li>Removing Middle Values -> myArray.splice(2,1) </li>
+
+        </ul>
+        
+        <br>
+        <h5>Readbility</h5>
+        <ul>
+            <li>Whitespace -> Have Spaces to make long lines readable</li>
+            <li>Single Line Comments -> //Comment</li>
+            <li>Milti-line Comments -> /*Comment that is spread over multiple lines*/</li>
+        </ul>
+
+        <br>
+        <h4>Regular Expressions (Pattern)</h4>
+
+        <br>
+        <h5>Baics</h5>
+        <ul>
+            <li>Create by var pattern = /this/;</li>
+        </ul>
+
+        <h5>Uses</h5>
+        <ul>
+            <li>Returns true or false depending if pattern is in string1 ->  pattern.test(string1); </li>
+            <li>Insensitive -> pattern.test(string1); where pattern = /this/i</li>
+            <li>Appears at the beginning -> pattern = /^this/i</li>
+            <li>Appears at the enf -> pattern = /this$/i</li>
+        </ul>
+
+
+        <h4>Comparisons & More</h4>
+        
+        <br>
+        <h5>Comparisons</h5>
+        <ul>
+            <li>Strict Equality -> 1 === 1</li>
+            <li>Strict Inequality -> 1 !=== 1</li>
+            <li>Equality -> 1 == '1' gives true</li>
+            <li>Inequality -> 1 !== '1' gives false</li>
+            <li>Greater / Less than -> >  and  <</li>
+            <li>Greater / Less or Equal to -> >= or <=</li>
+        </ul>
+         
+
+        <h5>Arithmetic</h5>
+        <ul>
+            <li>Addtion ->  1+2</li>
+            <li>Substraction -> 2-1</li>
+            <li>Multiplication -> 2*2</li>
+            <li>Division -> 2/2</li>
+            <li>Modulas -> 5%1 would give 1</li>
+            <li>Increment / Decrementing by n -> num += n / num -= n</li>
+            <li>Increment / Decrementing by 1 -> num ++ / num --</li>
+            <li>Contatanation -> 'cat' + 'dog' would give 'catdog'</li>
+        </ul>
+
+        <br>
+        <h5>Logical Operators</h5>
+        <ul>
+            <li>AND needs all conditions to be true -> true && false (returns false)</li>
+            <li>OR needed only one conditions to be true -> true || false (returns true)</li>
+            <li>AND is operated first, then OR</li>
+            <li>NOT changes true to false and vice versa -> !true (returns false)</li>
+        </ul>
+         
+        <br>
+        <h5>Conditionals : If </h5>
+        <ul>
+            <li>How to use ->   if (answer === true){ console.log('Yay')}</li>
+            <li>More Conditions -> else if (condition) {process}</li>
+            <li>More Conditions (Used if non of the conditions are used)-> else (condition) {process} </li>
+        </ul>
+
+        <br>
+        <h5>Conditionals : switch</h5>
+        <ul>
+            <li>Uses Cases</li>
+            <li>How to use -> switch(answer){<br>case"true" : console.log("yay");
+                <br>break;<br>case"false": console.log("boo");<br>break;<br>default: console.log("nothing");<br>break;)</li>
+        </ul>
+
+        <br>
+        <h5>Terse ifs: One-liners</h5>
+        <ul>
+            <li>if (answer === true) {console.log('Yay')}</li>
+            <li>Truthy -> If string is calue = false, 0, -0, 0n, "", null, undefined, NaN</li>
+            <li>Falsy is opposite of Truthy</li>
+        </ul>
+
+        <br>
+        <h5>Terse ifs: Ternaries</h5>
+        <ul>
+            <li> How to use -> if true<br>? console.log('true')<br>: console.log('false')</li>
+        </ul>
+
+        <br>
+        <h5>Type checking</h5>
+        <ul>
+            <li>Use by -> typeof variableName </li>
+            <li>More detailed -> typeof variableName === "string" (returns true)</li>
+        </ul>
+
+
+        <br>
+        <h4>Iterating with Loops</h4>
+
+        <br>
+        <h5>For Loops : Sequential</h5>
+        <ul>
+            <li>How to use -> for (let i = 0; i < 10; i++) {console.log(i)}</li>
+            <li>Loop through array -><br> for (let i = 0; i < arrayName.length; i++) {console.log(arrayName[i])}</li>
+            <li>Can also add if statements to cut the loop short and have a break in the statement</li>
+        </ul>
+
+        <br>
+        <h5> For Loops : Enumerative</h5>
+        <ul>
+            <li>Iterates over arrays</li>
+            <li>How to use (in) -> for (var P in pageNames) {console.log(P, pageNames[p])</li>
+            <li>How to use (of) -> for (var P in pageNames) {console.log(P, pageNames[p])</li>
+            <li>If looping through objects -> Use if (object.hasOwnProperty(count)){process) 
+                to make sure value is in the object and is not inherited.</li>
+        </ul>
+
+        <br>
+        <h5> Set</h5>
+        <ul>
+            <li>Needs constructor -> let mySet = new Set();</li>
+            <li>Sets stores value only once unlike array</li>
+            <li>Accessed and changed using special methods -> mySet.add('1') or mySet.has('1') === true</li>
+        </ul>
+
+        <br>
+        <h5>Map</h5>
+        <ul>
+            <li>Needs constructor -> let myMap = new Map();</li>
+            <li>Preserves the order of keys </li>
+            <li>Accessed and changed using special methods -> mySet.set('1','one') or mySet.has('1') === true</li>
+        </ul>
+        
+        <br>
+        <h5>While Loop</h5>
+        <ul>
+            <li>Repeats until condition is met</li>
+            <li>How to use -> while (condition){process}</li>
+            <li>Improtant to have a break statement to prevent a infinite loop</li>
+        </ul>
+
+
+        <br>
+        <h4>Functions</h4>
+
+        <br>
+        <h5>Basics</h5>
+        <ul>
+            <li>How to use -> <br>1.function name(parameters/argument) {process}
+            <br>2. const name(parameter/argument) = function { process }</li>
+            <li>Use retrun to give the processed value back to the main program</li>
+            <li>Default Value -> function showCase(value = "Default", count = 5){process}</li>
+            <li>Unknown number of parameter can be accessed -> function showCase(){arguments} where 
+                arguments is a array of parameters entered</li>
+
+        </ul>
+
+        <br>
+        <h5>Objects and Arrays in function</h5>
+        <ul>
+            <li>When passing a object as a parameter in a function, a copy of the memory address 
+                of the object is used in the function</li>
+            <li>This means that the object can be manipulated directly in the function as the function 
+                is using a referenceed version of the object unless the reutrned value is a copy</li>
+        </ul>
+        
+        <br>
+        <h5>Functions as Parameters</h5>
+        <ul>
+            <li>Function can be made as an object and thus can be used as a paramenter in another function</li>
+        </ul>
+
+        <br>
+        <h5>Scopes</h5>
+        <ul>
+            <li>Global : Can be accessed and modified in all scripts </li>
+            <li>Can be used in functions or operators using global.varName</li>
+            <li>Local : Can be accessed and modified in only that script or function</li>
+        </ul>
+        
+        <br>
+        <h5>Lamda Functions</h5>
+        <ul>
+            <li>Can be made using by --> const funcName = (parameter) => {process}</li>
+        </ul>
+
+        <br>
+        <h5>Rest (of the) Parameters</h5>
+        <ul>
+            <li>How to use -> function funcName(para1, para2, ...arrayName){process}</li>
+        </ul>
+
+        <br>
+        <details style="font-size: large;">
+            <summary>Test Results for Quizes</summary>
+            <ul style="list-style-type: none;">
+                <li><img src = "Pics/Week 5/Lesson 1 Quiz.png" class="img-fluid rounded mx-auto d-block" alt="Quiz 1"width="1000" height="auto"></li>
+                <li><img src = "Pics/Week 5/Lesson 2 Quiz.png" class="img-fluid rounded mx-auto d-block" alt="Quiz 2"width="1000" height="auto"></li>
+                <li><img src = "Pics/Week 5/Lesson 3 Quiz.png" class="img-fluid rounded mx-auto d-block" alt="Quiz 3"width="1000" height="auto"></li>
+                <li><img src = "Pics/Week 5/Lesson 4 Quiz.png" class="img-fluid rounded mx-auto d-block" alt="Quiz 4"width="1000" height="auto"></li>
+                <li><img src = "Pics/Week 5/Lesson 5 Quiz.png" class="img-fluid rounded mx-auto d-block" alt="Quiz 5"width="1000" height="auto"></li>
+            </ul>
+        </details>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."></script>
+</body>
+</html>

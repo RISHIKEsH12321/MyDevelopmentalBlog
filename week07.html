@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7</title>
+    <link rel="icon" type="image/x-icon" style = "border-radius: 50%;" href="https://cdn-icons-png.freepik.com/512/693/693467.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-...">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week01.html">Week 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week02.html">Week 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week03.html">Week 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week04.html">Week 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week05.html">Week 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week06.html">Week 6</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week07.html">Week 7</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week08.html">Week 8</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week09.html">Week 9</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week12.html">Week 12</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week14.html">Week 14</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class = "display-1">DOM, Events & Local Storage</h1>
+        <br>
+
+        <h2>DOM</h2>
+        <p>As a browser <b>loads a webpage</b>, it creates a <b>model</b> of that page. The model is called a <b>DOM Tree</b></p>
+
+        <br>
+        <h3>Steps on working with the DOM</h3>
+        <ol>
+            <li>Locate the <b>node</b> that represents the <b>element</b> you want to work with</li>
+            <li>Use its <b>text content</b>, <b>child elements</b>, and <b.attributes</li>
+        </ol>
+
+        <br>
+        <h3>Access Elements</h3>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Method</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>getElementById();</td>
+                    <td>Uses the value of an element's id attribute</td>
+                </tr>
+                <tr>
+                    <td>querySelector();</td>
+                    <td>Uses a CSS selector, and returns the first matching element. Classes or Ids can be used</td>
+                </tr>
+                <tr>
+                    <td>getElementsByClassName();</td>
+                    <td>Selects all elements that have a specific value for their class attribute</td>
+                </tr>
+                <tr>
+                    <td>getElementsByTagName();</td>
+                    <td>Selects all elements that have the specified tag name</td>
+                </tr>
+                <tr>
+                    <td>querySelectorAll()</td>
+                    <td>Uses a CSS selector to select all matching elements</td>
+                </tr>
+                <tr>
+                    <td>var itemOne = getElementById("one");</td>
+                    <td>If you are working with the element more than <br>once, it is best you store it in a variable</td>
+                </tr>
+                <tr>
+                    <td>item()</td>
+                    <td>Nodelists have a method called items(). Returns the individual node from the NodeList.
+                        <br>Specify the index number as the parameter
+                        <br>let elements =
+                        <br>document.getElementsByClassName('hot');
+                        <br>if (elements.length >= 1){
+                        <br>let firstItem = elements.item(0);
+                        <br>};
+                    </td>
+                </tr>
+                <tr>
+                    <td>Array syntax</td>
+                    <td>Access individual nodes using a square bracket syntax like an array.
+                        <br>Specify the index number as the parameter
+                        <br>let elements =
+                        <br>document.getElementsByClassName('hot');
+                        <br>if (elements.length >= 1){
+                        <br>let firstItem = elements[0];
+                        <br>}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <h3>Event Handling</h3>
+
+        <br>
+        <h4>UI Events</h4>
+        <table class = "table">
+            <thead>
+                <tr>
+                  <th scope="col">Event</th>
+                  <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>load</td>
+                    <td>Web page has finished loading</td>
+                </tr>
+                <tr>
+                    <td>unload</td>
+                    <td>Web page is unloading (usually because a new page was requested)</td>
+                </tr>
+                <tr>
+                    <td>error</td>
+                    <td>Browser encounters a JavaScript error or an asset doesn't exist</td>
+                </tr>
+                <tr>
+                    <td>resize</td>
+                    <td>Browser window has been resized</td>
+                </tr>
+                <tr>
+                    <td>scroll</td>
+                    <td>User has scrolled up or down the page</td>
+                </tr>
+            </tbody>            
+        </table>
+
+        <br>
+        <h4>Keyboard Events</h4>
+        <table class = "table">
+            <thead>
+                <tr>
+                  <th scope="col">Event</th>
+                  <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>keydown</td>
+                    <td>User first presses a key (repeats while the key is depressed)</td>
+                </tr>
+                <tr>
+                    <td>keyup</td>
+                    <td>User releases a key</td>
+                </tr>
+                <tr>
+                    <td>keypress</td>
+                    <td>Character is being inserted (repeats while the key is depressed)</td>
+                </tr>
+            </tbody>            
+        </table>
+
+        <br>
+        <h4>Mouse Events</h4>
+        <table class = "table">
+            <thead>
+                <tr>
+                  <th scope="col">Event</th>
+                  <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>click</td>
+                    <td>User presses and releases a button over the same element</td>
+                </tr>
+                <tr>
+                    <td>dblclick</td>
+                    <td>User presses and releases a button twice over the same element</td>
+                </tr>
+                <tr>
+                    <td>mousedown</td>
+                    <td>User presses a mouse button while over an element</td>
+                </tr>
+                <tr>
+                    <td>mouseup</td>
+                    <td>User releases a mouse button while over an element</td>
+                </tr>
+                <tr>
+                    <td>mousemove</td>
+                    <td>User moves the mouse (not on a touchscreen)</td>
+                </tr>
+                <tr>
+                    <td>mouseover</td>
+                    <td>User moves the mouse over an element (not on a touchscreen)</td>
+                </tr>
+                <tr>
+                    <td>mouseout</td>
+                    <td>User moves the mouse off an element (not on a touchscreen)</td>
+                </tr>
+            </tbody>        
+        </table>
+
+        <h4>Focus Events</h4>
+        <table class = "table">
+            <thead>
+                <tr>
+                  <th scope="col">Event</th>
+                  <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>focus</td>
+                    <td>Element gains focus</td>
+                </tr>
+                <tr>
+                    <td>focusin</td>
+                    <td>Element gains focus (bubbles up the DOM tree)</td>
+                </tr>
+                <tr>
+                    <td>blur</td>
+                    <td>Element loses focus</td>
+                </tr>
+                <tr>
+                    <td>focusout</td>
+                    <td>Element loses focus (bubbles up the DOM tree)</td>
+                </tr>
+            </tbody>        
+        </table>
+
+        <h4>Form Events</h4>
+        <table class = "table">
+            <thead>
+                <tr>
+                  <th scope="col">Event</th>
+                  <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>change</td>
+                    <td>Value in any &lt;input&gt; or &lt;textarea&gt; element has changed or any element with the contenteditable attribute</td>
+                </tr>
+                <tr>
+                    <td>input</td>
+                    <td>Value in select box, checkbox, or radio button changes</td>
+                </tr>
+                <tr>
+                    <td>submit</td>
+                    <td>User submits a form (using a button or a key)</td>
+                </tr>
+                <tr>
+                    <td>reset</td>
+                    <td>User clicks on a form's reset button (rarely used in today's context for UX reasons)</td>
+                </tr>
+                <tr>
+                    <td>cut</td>
+                    <td>User cuts content from a form field</td>
+                </tr>
+                <tr>
+                    <td>copy</td>
+                    <td>User copies content from a form field</td>
+                </tr>
+                <tr>
+                    <td>paste</td>
+                    <td>User pastes content into a form field</td>
+                </tr>
+                <tr>
+                    <td>select</td>
+                    <td>User selects some text in a form field</td>
+                </tr>
+            </tbody>            
+        </table>
+
+        <br>
+        <h3>Event Listeners</h3>
+        <ul>
+            <li>Event Listeners with <b>No Paramenter</b> -> <b>element.addEventListener('event', functionName, [Boolean]);</b></li>
+            <li>Event Listeners with <b>Paramenter</b> -><b>
+                <br>el.addEventListener('blur', function(){
+                <br>checkUsername(5);
+                <br>}, false);</b>
+            </li>
+        </ul>
+
+        <br>
+        <h3>Local Storage</h3>
+        <p>HTML5 Storage is based on named <b>key/value pairs</b>. You <b>store</b> data based on a named key, then you can <b>retrieve</b>
+            that data with the same key. The <b>named key</b> is a <b>string</b>.<br>
+            <br>The data can be <b>any type</b> supported by JavaScript, including <b>strings, Booleans, integers, or floats</b>.
+            However, the data is actually <b>stored as a string</b>.<br>
+            <br>If you are <b>storing and retrieving</b> anything other than <b>strings</b>, you will need to
+            use <b>functions</b> like <b>parseInt() or parseFloat()</b> to <b>convert</b> your retrieved data
+            into the <b>expected</b> JavaScript <b>data type</b>.
+        </p>
+
+        <h4>Types of Storage</h4>
+        <ul>
+            <li>localStorage -> Stored when tab is closed & All open windows / tabs Y N can access the data</li>
+            <li>sessionStorage -> NOT Stored when tab is closed & NOT All open windows / tabs Y N can access the data</li>
+        </ul>
+
+        <br>
+        <h3>Methods & Properties</h3>
+        <table class = "table">
+            <thead>
+                <tr>
+                  <th scope="col">Method</th>
+                  <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>setItem(key,value)</td>
+                    <td>Creates a new key/value pair</td>
+                </tr>
+                <tr>
+                    <td>getItem(key)</td>
+                    <td>Gets the value for the specified key</td>
+                </tr>
+                <tr>
+                    <td>removeItem(key)</td>
+                    <td>Removes the key/value pair for the specified key</td>
+                </tr>
+                <tr>
+                    <td>clear() </td>
+                    <td>Clears all information from that storage object</td>
+                </tr>
+                <tr>
+                    <td>length (A property)</td>
+                    <td>Number of keys</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <h3>Objects</h3>
+        <p>JSON <b>looks like</b> object literal <b>syntax</b> but it is <b>just data, not an object</b>
+            <br>E.g.<b>
+            <br>{
+            <br>"name": "Pikachu",
+            <br>"hp": 200,
+            <br>"attack": 999,
+            <br>"defense": 999,
+            <br>"type": "electric"
+            <br>}</b>
+        </p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."></script>
+</body>
+</html>
